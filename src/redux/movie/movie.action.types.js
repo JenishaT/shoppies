@@ -1,0 +1,5 @@
+const MOVIE_ACTION_TYPES = {
+    MOVIE_SEARCH_SUCCESS: "MOVIE_SEARCH_SUCCESS"
+  };
+  
+  export default MOVIE_ACTION_TYPES;
