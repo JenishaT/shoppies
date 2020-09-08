@@ -6,6 +6,7 @@ import {
 } from "@material-ui/icons";
 
 import { searchMovies } from "../../redux/movie/movie.actions";
+import Typography from '@material-ui/core/Typography';
 import { connect } from "react-redux";
 
 import "./search-bar.styles.scss";
@@ -37,7 +38,10 @@ class SearchBar extends React.Component {
     render() {
         return (
             <Card className="search-container">
-                Search
+                <Typography variant="h6" gutterBottom>
+                    Search For Movies
+                </Typography>
+
                 <Grid container
                     direction="row"
                     justify="center"

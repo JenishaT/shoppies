@@ -1,6 +1,8 @@
 import MOVIE_ACTION_TYPES from "./movie.action.types";
 const INITIAL_STATE = {
-  movies: null
+  movies: null,
+  nominations: []
+
 };
 
 const movieReducer = (prevState = INITIAL_STATE, action) => {
@@ -10,7 +12,18 @@ const movieReducer = (prevState = INITIAL_STATE, action) => {
           ...prevState,
           movies: action.payload.Search
         };
-      default:
+    case MOVIE_ACTION_TYPES.RETRIEVE_MOVIE_PLOT:
+        let index = prevState.movies.findIndex(movie => movie.imdbID === action.payload.imdbID);
+        prevState.movies[index].Plot = action.payload.Plot;
+        return {
+             ...prevState
+        }
+    case MOVIE_ACTION_TYPES.ADD_NOMINATION_SUCCESS:
+        return {
+            ...prevState,
+            nominations: action.payload
+        }
+    default:
         return prevState;
     }
   };
