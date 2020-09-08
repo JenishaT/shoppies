@@ -22,3 +22,14 @@ export const addNomination = (id) => async (dispatch, getState) => {
         dispatch({ type: MOVIE_ACTION_TYPES.ADD_NOMINATION_SUCCESS, payload: nominations });
     }
 }
+
+export const removeNomination = (id) => async (dispatch, getState) => {
+    let nominations = getState().movie.nominations;
+    let deleteIndex = nominations.findIndex(nomination => nomination.imdbID === id);
+    nominations.splice(deleteIndex, 1);
+    dispatch({ type: MOVIE_ACTION_TYPES.REMOVE_NOMINATION_SUCCESS, payload: nominations });
+}
+
+export const reset = () => async (dispatch) => {
+    dispatch({ type: MOVIE_ACTION_TYPES.RESET_SUCCESS});
+}

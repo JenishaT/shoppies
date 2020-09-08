@@ -4,13 +4,16 @@ import './App.css';
 
 import SearchBar from "./components/search-bar/search-bar.component";
 import SearchResults from "./components/search-results/search-results.component"
+import NominationsList from "./components/nominations-list/nominations-list.component"
 
 function App() {
   return (
     <div className="App">
-      <h2>
-        The Shoppies
+      <header className="App-header">
+        <h2>
+          The Shoppies
     </h2>
+      </header>
       <Grid
         container
         direction="column"
@@ -22,15 +25,16 @@ function App() {
           <SearchBar> </SearchBar>
         </Grid>
         <Grid item xs={12}>
-          <Grid container direction="row">
+          <Grid container direction="row" spacing={1}>
             <Grid item xs={12} sm={6}>
               <SearchResults></SearchResults>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <NominationsList></NominationsList>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
-      <header className="App-header">
-      </header>
     </div>
   );
 }

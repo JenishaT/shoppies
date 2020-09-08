@@ -1,0 +1,15 @@
+#nomination-container {
+  width: 100vh;
+}
+#nomination-container {
+  min-height: 20vh;
+  max-height: 55vh;
+  overflow-y: auto;
+}
+#nomination-container-list {
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+#nomination-card {
+  width: 100%;
+}

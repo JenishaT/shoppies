@@ -74,9 +74,11 @@ class SearchResults extends React.Component {
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item>
-                                                    <Button variant="outlined" disabled={this.state.nominations !== 0 && this.state.nominations.some(nomination => nomination.imdbID === movie.imdbID)} onClick={this.nominateMovie.bind(this, movie.imdbID)}>
-                                                        Nominate
-                                            </Button>
+                                                    <Grid justify="flex-end" container>
+                                                        <Button variant="outlined" disabled={this.state.nominations && this.state.nominations.some(nomination => nomination.imdbID === movie.imdbID)} onClick={this.nominateMovie.bind(this, movie.imdbID)}>
+                                                            Nominate
+                                                        </Button>
+                                                    </Grid>
                                                 </Grid>
                                             </Grid>
                                         </Grid>

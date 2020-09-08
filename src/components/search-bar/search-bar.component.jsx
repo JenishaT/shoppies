@@ -32,6 +32,7 @@ class SearchBar extends React.Component {
     };
 
     clearQuery = (e) => {
+        this.props.searchMovies("");
         this.setState({ query: "", clearQueryVisible: false });
     };
 
