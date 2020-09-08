@@ -1,5 +1,6 @@
-###UX Developer Intern & Web Developer Intern Challenge - Winter 2021
-##The Shoppies: Movie awards for entrepreneurs
+## UX Developer Intern & Web Developer Intern Challenge - Winter 2021
+
+### The Shoppies: Movie awards for entrepreneurs
 
 This Project is deployed at https://shoppies-jenisha.herokuapp.com/
 
