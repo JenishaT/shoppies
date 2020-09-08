@@ -6,11 +6,13 @@ This Project is deployed at https://shoppies-jenisha.herokuapp.com/
 
 ### Usage Notes
 
-User can search for movies by title and add movies as nominees by pressing nominate
+User can search for movies by title and add movies as nominees by pressing 'Nominate;
 
 Once user has enter 5 nominees, an alert will pop up notifying them to submit their nominations
 
 If the user adds more than 5 nominees, they will be notified of their error through an alert and will be asked to remove the extra nominees
+
+User can remove a nomination by clicking 'Remove' on the corresponding nominee in the nominations list
 
 Once user clicks 'Submit', a pop-up will be displayed with an overview of their nominations
 
