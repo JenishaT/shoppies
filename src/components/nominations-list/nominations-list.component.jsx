@@ -94,7 +94,7 @@ class NominationsList extends React.Component {
                             </Alert> : null}
                         </Grid>
                         <Grid item xs={12}>
-                            <Card id="nomination-container-list" >
+                            <Card id="nomination-container-list" elevation={0}>
                                 <Grid
                                     container
                                     direction="column"
