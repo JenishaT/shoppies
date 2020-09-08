@@ -4,10 +4,10 @@
 #nomination-container {
   min-height: 20vh;
   max-height: 55vh;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 #nomination-container-list {
-    max-height: 55vh;
+    max-height: 40vh;
     overflow-y: auto;
   }
 #nomination-card {
