@@ -1,20 +1,24 @@
 #poster {
-    width: 150px;
-    height: 200px;
+  width: 150px;
+  height: 200px;
 }
 
 .MuiGrid-grid-xs-true {
-    flex-grow: 1;
-    max-width: 100%;
-    flex-basis: 0;
-    text-align: left;
+  flex-grow: 1;
+  max-width: 100%;
+  flex-basis: 0;
+  text-align: left;
 }
 
+#result-container {
+  height: 55vh;
+  overflow-y: hidden;
+}
 #result-card-container {
-    width: 100vh;
-    height: 55vh;
-    overflow-y: auto;
+  width: 100vh;
+  height: 45vh;
+  overflow-y: auto;
 }
 #result-card {
-    width: 100%;
+  width: 100%;
 }

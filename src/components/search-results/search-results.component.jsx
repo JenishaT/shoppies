@@ -42,7 +42,7 @@ class SearchResults extends React.Component {
 
     render() {
         return (
-            <Card id="result-card-container" >
+            <Card id="result-container" >
                 <Grid
                     container
                     direction="column"
@@ -53,41 +53,53 @@ class SearchResults extends React.Component {
                     <Grid item xs={12}>
                         <Typography variant="h6" gutterBottom>
                             Search Results
-                </Typography>
+                        </Typography>
                     </Grid>
-                    {this.state.movies ? (this.state.movies.map((movie) => (
-                        <Grid item xs={11}>
-                            <Card variant="outlined" id="result-card" key={movie.imdbID}>
-                                <CardContent>
-                                    <Grid container spacing={2}>
-                                        <Grid item>
-                                            {movie.Poster ? (
-                                                <img id="poster" src={movie.Poster} alt={movie.Title}></img>
-                                            ) : null}
-                                        </Grid>
-                                        <Grid item xs={12} sm container>
-                                            <Grid item xs container direction="column" spacing={0}>
-                                                <Grid item xs>
-                                                    <b>{movie.Title}</b> ({movie.Year})
+                    <Grid item xs={12}>
+                        <Card id="result-card-container" elevation={0}>
+                            <Grid
+                                container
+                                direction="column"
+                                justify="center"
+                                alignItems="center"
+                                spacing={1}
+                            >
+                                {this.state.movies ? (this.state.movies.map((movie) => (
+                                    <Grid item xs={11}>
+                                        <Card variant="outlined" id="result-card" key={movie.imdbID}>
+                                            <CardContent>
+                                                <Grid container spacing={2}>
+                                                    <Grid item>
+                                                        {movie.Poster ? (
+                                                            <img id="poster" src={movie.Poster} alt={movie.Title}></img>
+                                                        ) : null}
+                                                    </Grid>
+                                                    <Grid item xs={12} sm container>
+                                                        <Grid item xs container direction="column" spacing={0}>
+                                                            <Grid item xs>
+                                                                <b>{movie.Title}</b> ({movie.Year})
                                                     <Typography variant="body2" gutterBottom>
-                                                        {movie.Plot}
-                                                    </Typography>
-                                                </Grid>
-                                                <Grid item>
-                                                    <Grid justify="flex-end" container>
-                                                        <Button variant="outlined" disabled={this.state.nominations && this.state.nominations.some(nomination => nomination.imdbID === movie.imdbID)} onClick={this.nominateMovie.bind(this, movie.imdbID)}>
-                                                            Nominate
+                                                                    {movie.Plot}
+                                                                </Typography>
+                                                            </Grid>
+                                                            <Grid item>
+                                                                <Grid justify="flex-end" container>
+                                                                    <Button variant="outlined" disabled={this.state.nominations && this.state.nominations.some(nomination => nomination.imdbID === movie.imdbID)} onClick={this.nominateMovie.bind(this, movie.imdbID)}>
+                                                                        Nominate
                                                         </Button>
+                                                                </Grid>
+                                                            </Grid>
+                                                        </Grid>
                                                     </Grid>
                                                 </Grid>
-                                            </Grid>
-                                        </Grid>
+                                            </CardContent>
+                                        </Card>
                                     </Grid>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))
-                    ) : null}
+                                ))
+                                ) : null}
+                            </Grid>
+                        </Card>
+                    </Grid>
                 </Grid>
             </Card>
         )
